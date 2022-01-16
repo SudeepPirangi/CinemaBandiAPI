@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "0af20d80-c2aa-40ab-b860-5a5149193a27",
+    "title": "Sarkaru Vaari Paata",
+    "poster": "http://via.placeholder.com/640x360",
+    "promo": "http://via.placeholder.com/640x360",
+    "year": 2022,
+    "cast": "Mahesh Babu, Keerthi Suresh",
+    "director": "Parashuram Petla",
+    "production": "Mythri Movie Makers",
+    "music": "SS Thaman",
+    "description": "A commercial flick of Mahesh Babu that releases after a 2 and half years long gap",
+    "category": "movie",
+    "genre": "Entertainer",
+    "language": "Telugu",
+    "imdb": null
+  },
+  {
+    "_id": "5146b215-5b22-41b8-a6ec-1e4b61ccf529",
+    "title": "RRR",
+    "poster": "http://via.placeholder.com/640x360",
+    "promo": "http://via.placeholder.com/640x360",
+    "year": 2022,
+    "cast": "Ram Charan, Jr. NTR, Ajay Devgan, Alia Bhatt",
+    "director": "SS Rajamouli",
+    "production": "DVV Entertainments",
+    "music": "MM Keeravani",
+    "description": "India's biggest multi-starrer with a budget around 500 Cr INR",
+    "category": "movie",
+    "genre": "Fiction, Action, Entertainer",
+    "language": "Telugu, Tamil, Malayalam, Kannada, Hindi",
+    "imdb": null
+  },
+  {
+    "_id": "24442c87-31de-417f-b440-7b35fb5dc176",
+    "title": "Pushpa - The Rise",
+    "poster": "http://via.placeholder.com/640x360",
+    "promo": "http://via.placeholder.com/640x360",
+    "year": 2021,
+    "cast": "Allu Arjun, Rashmika Mandanna",
+    "director": "Sukumar",
+    "production": "Mythri Movie Makers",
+    "music": "Devi Sri Prasad",
+    "description": "This movie is about the rise of a Red Sandal smuggler",
+    "category": "movie",
+    "genre": "Action, Entertainer",
+    "language": "Telugu, Tamil, Malayalam, Kannada, Hindi",
+    "imdb": 8.1
+  }
+]
