@@ -2,8 +2,14 @@ const { buildSchema } = require("graphql");
 
 module.exports = buildSchema(`
 
+  type StandardResponse {
+    statusCode: Int
+    message: String
+    data: String
+  }
+
   input InputMovie {
-    _id: ID!
+    _id: ID
     title: String!
     poster: String!
     promo: String!
@@ -43,7 +49,7 @@ module.exports = buildSchema(`
   type RootMutation {
     addMovie(movie: InputMovie!): Movie!
     updateMovie(movie: InputMovie!): Movie!
-    deleteMovie(movieId: ID!): [Movie]
+    deleteMovie(movieId: ID!): StandardResponse
   }
 
   schema {
