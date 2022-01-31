@@ -5,7 +5,7 @@ const devConstants = {
 };
 
 const prodConstants = {
-  MONGO_CONNECTION_STRING: `mongodb+srv://${ENV.MONGODB_USERNAME}:${ENV.MONGODB_PASSWORD}@${ENV.MONGODB_HOST}:${ENV.MONGODB_PORT}/${ENV.MONGODB_DATABASE}`,
+  MONGO_CONNECTION_STRING: `mongodb+srv://${ENV.MONGODB_USERNAME}:${ENV.MONGODB_PASSWORD}@${ENV.MONGODB_HOST}/${ENV.MONGODB_DATABASE}`,
 };
 
 module.exports = ENV.NODE_ENV === "development" ? { ...devConstants } : { ...prodConstants };

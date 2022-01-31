@@ -13,6 +13,20 @@ module.exports = {
       throw newError;
     }
   },
+  getSingleMovie: async (inputData, req) => {
+    try {
+      let { movieId } = inputData;
+      // console.log("==> input received for getSingleMovie", movieId);
+      let mongoResponse = await MovieModel.findById(movieId);
+      // console.log("==> Get Single Movie MongoResponse", mongoResponse);
+      return mongoResponse;
+    } catch (error) {
+      console.log(`Error while getting a movie with id ${movieId}`, error);
+      let newError = new Error(`Error while getting a movie with id ${movieId}`);
+      newError.data = error;
+      throw newError;
+    }
+  },
   addMovie: async (inputData, req) => {
     try {
       let { movie } = inputData;

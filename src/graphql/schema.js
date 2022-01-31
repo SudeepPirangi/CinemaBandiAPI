@@ -44,6 +44,7 @@ module.exports = buildSchema(`
 
   type RootQuery {
     getMovies: [Movie]
+    getSingleMovie(movieId: ID!): Movie
   }
 
   type RootMutation {
