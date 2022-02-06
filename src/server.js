@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { graphqlHTTP } = require("express-graphql");
 const dotenv = require("dotenv").config({ debug: process.env.DEBUG });
 const mongoose = require("mongoose");
@@ -12,8 +13,27 @@ if (dotenv.error) console.log("==> dotenv error", dotenv.error);
 
 const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT;
+const ADMINS = process.env.ADMINS;
 
 const app = express();
+
+// setting up cors
+app.use(cors({ origin: "*" }));
+
+// Authorization middleware
+app.use((req, res, next) => {
+  if (ENV?.toLowerCase() === "development") return next();
+  if (ADMINS && ADMINS.length > 0) {
+    const adminsList = ADMINS.split(",");
+    const emailHeader = req.headers.email;
+    if (adminsList.includes(emailHeader)) return next();
+  }
+  res.status(401).send({
+    status: 401,
+    message: "Access denied",
+    data: "Request is not authorized",
+  });
+});
 
 app.use(
   "/graphql",
